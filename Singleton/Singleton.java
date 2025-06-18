@@ -1,0 +1,15 @@
+public class Singleton {
+    private static Singleton instance;
+    private String secretMessage;
+    private Singleton() {
+        this.secretMessage = "thisismysecretmessage";
+    }
+    public static Singleton getInstance() {
+        if(instance == null) {
+            instance = new Singleton();
+
+        }
+        return instance;
+
+    }
+}
