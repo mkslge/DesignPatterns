@@ -4,7 +4,8 @@ public class Singleton {
     private Singleton() {
         this.secretMessage = "thisismysecretmessage";
     }
-    public static Singleton getInstance() {
+
+    public static synchronized Singleton getInstance() {
         if(instance == null) {
             instance = new Singleton();
 
